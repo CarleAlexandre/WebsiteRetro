@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #f0f0f0;
+  background: #0d0d0d;
+  overflow-x: hidden;
+}
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 255, 255, 0.1) 0px,
+    rgba(0, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0.1) 0px,
+    rgba(0, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+  background-color: #0d0d0d;
+  z-index: -2;
+}
+
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  animation: flicker 0.2s infinite;
+  border-radius: 1.5% / 1%;
+  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 1; }
+}
+
+.foreground-container {
+  max-width: 960px;
+  aspect-ratio: 4 / 3;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  padding: 2rem;
+  position: relative;
+  border-radius: 2% / 1.5%;
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #ff00ff;
+}
+header h1 {
+  font-size: 2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffff;
+  border-radius: 4px;
+  text-shadow: 0 0 3px #00ffff;
+}
+nav ul li a:hover {
+  background: #00ffff;
+  color: #0d0d0d;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Terminal-style containers */
+.terminal {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ff00ff;
+  padding: 2rem;
+  width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px #ff00ff;
+}
+.terminal input {
+  background: #1a1a1a;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+}
+.terminal button {
+  background: #ff00ff;
+  border: none;
+  color: #0d0d0d;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: monospace;
+  text-shadow: 0 0 3px #ff00ff;
+}
+
+/* Section headings */
+main section h2 {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Placeholder styles for posts and news */
+#posts p, #news-ticker p {
+  text-align: center;
+  font-style: italic;
+  padding: 1rem;
+}

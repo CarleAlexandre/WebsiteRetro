@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthwave Game Studio</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Grid Background -->
+  <div class="grid-bg"></div>
+
+  <!-- CRT Overlay -->
+  <div class="crt-overlay"></div>
+
+  <!-- Foreground Container -->
+  <div class="foreground-container">
+    <!-- Header / Navigation -->
+    <header>
+      <h1>Synthwave Game Studio</h1>
+      <nav>
+        <ul>
+          <li><a href="#" id="nav-landing">Home</a></li>
+          <li><a href="#" id="nav-login">Login</a></li>
+          <li><a href="#" id="nav-blog">Blog</a></li>
+          <li><a href="#" id="nav-chat">Chat</a></li>
+          <li><a href="#" id="nav-news">News</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main id="main-content">
+      <!-- Landing Section -->
+      <section id="landing-section">
+        <h2>Welcome to the Future Retro</h2>
+        <p>Experience our games in neon-lit glory...</p>
+      </section>
+
+      <!-- Login Section (hidden by default) -->
+      <section id="login-section" class="hidden">
+        <div class="terminal">
+          <h2>Login</h2>
+          <form id="login-form">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit">Enter</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog-section" class="hidden">
+        <h2>Studio Blog</h2>
+        <div id="posts">
+          <!-- Posts will load here -->
+          <p>Coming soon...</p>
+        </div>
+      </section>
+
+      <!-- Chat (IRC) Section -->
+      <section id="chat-section" class="hidden">
+        <h2>Community Chat</h2>
+        <div id="chat-window" class="terminal">
+          <p><em>IRC interface coming soon...</em></p>
+        </div>
+      </section>
+
+      <!-- Newsfeed Section -->
+      <section id="news-section" class="hidden">
+        <h2>Newsfeed</h2>
+        <div id="news-ticker">
+          <p><em>Latest studio news will appear here...</em></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
